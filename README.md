@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![Rede Neural](https://img.shields.io/badge/Machine%20Learning-Keras/TensorFlow-red?logo=tensorflow)
 ![Objetivo](https://img.shields.io/badge/Objetivo-Classifica%C3%A7%C3%A3o-orange)
-![Status](https://img.shields.io/badge/status-Desafio_2_Conclu%C3%ADdo-green)
+![Status](https://img.shields.io/badge/status-Em_desenvolvimento-yellow)
 ![Licença](https://img.shields.io/badge/Licença-Livre-lightgrey)
 
 ---
