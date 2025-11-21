@@ -38,21 +38,21 @@ x_labels = [f"Sem.{s}\n{a}" for s, a in zip(df['semana_num'], df['ano'])]
 
 
 # 1.1. Casos Reais (para contexto visual)
-plt.plot(x_values, df['real_casos'], label='Casos Reais (Base)', color='gray', linestyle='-', alpha=0.5)
+plt.plot(x_values, df['real_casos'], label='Casos Reais (Base)', color='gray', linestyle='-', alpha=0.5) # type: ignore
 
 # 1.2. Plotagem da Classificação Real e Predita
 colors = ['green', 'red'] 
 
 # Classificação Real: Ajusta a posição Y para a "pista" inferior
 y_offset_real = df['real_class'].replace({0: 10, 1: 30}) 
-plt.scatter(x_values, y_offset_real, 
+plt.scatter(x_values, y_offset_real,  # type: ignore
             marker='o', s=60, 
             c=[colors[c] for c in df['real_class']], 
             label='Classe Real (o)', alpha=0.7)
 
 # Classificação Predita: Ajusta a posição Y para a "pista" superior
 y_offset_pred = df['pred_class'].replace({0: 50, 1: 70}) 
-plt.scatter(x_values, y_offset_pred, 
+plt.scatter(x_values, y_offset_pred,  # type: ignore
             marker='x', s=100, 
             c=[colors[c] for c in df['pred_class']], 
             linewidths=2, label='Classe Predita (x)')
@@ -63,10 +63,10 @@ plt.xlabel("Semanas Epidemiológicas", fontsize=12)
 plt.ylabel("Casos (Série Cinza)", fontsize=12)
 
 # Define os ticks e labels do eixo Y
-plt.yticks([10, 30, 50, 70] + list(plt.yticks()[0]), 
+plt.yticks([10, 30, 50, 70] + list(plt.yticks()[0]),  # type: ignore
            ['Baixo Risco (Real)', 'Alto Risco (Real)', 'Baixo Risco (Predito)', 'Alto Risco (Predito)'] + [''] * len(plt.yticks()[0]))
            
-plt.xticks(x_values, x_labels, rotation=45, ha='right')
+plt.xticks(x_values, x_labels, rotation=45, ha='right') # type: ignore
 
 plt.legend(loc='upper right')
 plt.grid(axis='y', linestyle='--')
